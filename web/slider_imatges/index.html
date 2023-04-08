@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>paisatges</title>
+	<style>	
+		body {
+		  font-family: Verdana, Arial, Helvetica, sans-serif;
+		}
+
+		#foto{
+			widht: 400px;
+			height: 300px;
+		}	
+		
+		.btn {
+			font-size: 20px;
+			color: blue;
+			background-color: #FFFFFF;
+			border: 1px solid blue; 
+		}
+
+		.btn:hover {
+			cursor: pointer;
+			color: green;			
+		}	
+		
+		.titol {
+			font-size: 26px;
+			color: blue;
+		}			
+				
+	</style>
+	
+	<script>
+		var fotos = new Array();
+		
+		fotos.push("foto1.jpg");
+		fotos.push("foto2.jpg");
+		fotos.push("foto3.jpg");
+		fotos.push("foto4.jpg");
+		fotos.push("foto5.jpg");
+		var i = 0;
+		
+		function seguent(){
+			i = (i+1) % fotos.length;
+			document.getElementById("foto").src=fotos[i];
+		}
+		function anterior(){
+			i = (fotos.length + i - 1) % fotos.length;
+			document.getElementById("foto").src=fotos[i];
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<p class="titol"> Imatges boniques </p>
+		<div id="finestra"><img id="foto" src="foto3.jpg"></div>
+		<br>
+		<input type="button" class="btn" value="<" onclick="anterior();">
+		<input type="button" class="btn" value=">" onclick="seguent();">
+	</center>
+</body>
+</html>
