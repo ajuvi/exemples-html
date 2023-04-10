@@ -1,0 +1,25 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#foto{
+    width: 400px;
+    height: 300px;
+}	
+
+.btn {
+    font-size: 20px;
+    color: blue;
+    background-color: #FFFFFF;
+    border: 1px solid blue; 
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: green;			
+}	
+
+.titol {
+    font-size: 26px;
+    color: blue;
+}		

@@ -1,0 +1,60 @@
+#slider {
+    position:relative;		
+    background-color:black;
+}
+
+#slider{
+    width:500px;
+    height:300px;
+}
+
+#slider .esq{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 70px;
+    cursor: pointer;						
+    text-align: center; /* centrar el botó en horitzontal */
+    padding-top: 30%; /* centrar el botó en vertical */
+    opacity:0;	/* ocultar la banda esquerre */
+    /*display: none;*/
+    background-color: rgba(0,0,0,0.5); /* color negre amb transparència*/
+    
+    -webkit-transition: opacity 1s;	/* transició de la opacitat */		
+    transition: opacity 1s; 
+    
+    z-index: 10;						
+}
+
+#slider .dret{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 70px;
+    cursor: pointer;						
+    text-align:center;
+    padding-top: 30%;
+    opacity:0;
+    /*display: none;*/
+    background-color: rgba(0,0,0,0.5);
+
+    -webkit-transition: opacity 1s;	/* transició de la opacitat */		
+    transition: opacity 1s;
+    
+    z-index: 10;
+}		
+
+#slider .dret img, #slider .esq img {
+    width: 40px;
+    height:auto;
+}
+
+/* animacions dels botons */
+#slider:hover .dret, #slider:hover .esq  {
+    /*display: inline;*/
+    
+    opacity:1;
+    transition: opacity 1s;	/*transició de la opacitat*/			
+}	
