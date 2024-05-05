@@ -19,7 +19,7 @@ rangVelocitat.addEventListener(
         velocitat = rangVelocitat.value;
         document.getElementById("txtVelocitat").innerHTML = velocitat;     
         clearTimeout(timer);
-        timer = setInterval("next()", velocitat);
+        timer = setInterval("next()", Math.abs(velocitat-100));
     },
     false
  );
